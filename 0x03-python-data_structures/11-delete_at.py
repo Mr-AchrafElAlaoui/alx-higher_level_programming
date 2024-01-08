@@ -2,9 +2,7 @@
 
 def delete_at(my_list, idx=0):
     """Function that deletes the item at a specific position in a list"""
-    len_my_list = len(my_list)
-
-    if len_my_list < 0 or len_my_list <= idx:
+    if idx >= len(my_list) or idx < 0:
         return my_list
 
     del my_list[idx]
