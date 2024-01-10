@@ -9,15 +9,15 @@ def roman_to_int(roman_string):
     if roman_string is None or not isinstance(roman_string, str):
         return 0
     else:
-        prev_value = 0
-        for roman_char in reversed(roman_string):
+        # prev_value = 0
+        for roman_char in roman_string:
             if roman_char in roman_numerals:
                 roman_int = roman_numerals.get(roman_char)
-                if roman_int < prev_value:
-                    number -= roman_int
+                if roman_int > number:
+                    number = roman_int - number
                 else:
                     number += roman_int
-                prev_value = roman_int
+                # prev_value = roman_int
             else:
                 return 0
         return number
