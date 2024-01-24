@@ -35,7 +35,8 @@ class Square:
             str: A string representation of the square.
         """
         if self.__size == 0:
-            print()
+            print("")
+            return
         else:
             square_repre = "\n" * self.__position[1]
             square_repre += "\n".join([" " * self.__position[0] +
