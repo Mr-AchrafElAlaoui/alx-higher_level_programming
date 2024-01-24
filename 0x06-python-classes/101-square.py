@@ -35,15 +35,13 @@ class Square:
             str: A string representation of the square.
         """
         if self.__size == 0:
-            print("")
-            return
+            return "\n"
         else:
             square_repre = "\n" * self.__position[1]
             square_repre += "\n".join([" " * self.__position[0] +
                                        "#" * self.__size
                                        for _ in range(self.__size)])
-
-        return square_repre
+            return square_repre
 
     @property
     def size(self):
@@ -99,10 +97,10 @@ class Square:
         """Method that prints the square with '#' character.
         """
         if self.__size == 0:
-            print()
+            print("")
         else:
             for _ in range(self.__position[1]):
-                print()
+                print("")
             for _ in range(self.__size):
                 print(" " * self.__position[0], end="")
                 for _ in range(self.__size):
