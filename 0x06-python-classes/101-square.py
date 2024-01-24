@@ -34,10 +34,13 @@ class Square:
         Return:
             str: A string representation of the square.
         """
-        square_repre = "\n" * self.__position[1]
-        square_repre += "\n".join([" " * self.__position[0] +
-                                  "#" * self.__size
-                                   for _ in range(self.__size)])
+        if self.__size == 0:
+            return "\n"
+        else:
+            square_repre = "\n" * self.__position[1]
+            square_repre += "\n".join([" " * self.__position[0] +
+                                       "#" * self.__size
+                                       for _ in range(self.__size)])
 
         return square_repre
 
